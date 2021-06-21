@@ -1,0 +1,141 @@
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+  @mixin flex($values) {
+    -webkit-box-flex: $values;
+    -moz-box-flex:  $values;
+    -webkit-flex:  $values;
+    -ms-flex:  $values;
+    flex:  $values;
+  }
+  
+  @mixin order($val) {
+    -webkit-box-ordinal-group: $val;  
+    -moz-box-ordinal-group: $val;     
+    -ms-flex-order: $val;     
+    -webkit-order: $val;  
+    order: $val;
+  }
+  
+  .wrapper {
+    @include flexbox();
+  }
+  
+  .item {
+    @include flex(1 200px);
+    @include order(2);
+  }
+  
+    $bp:(
+    mobile : 480px,
+    tablet : 768px,
+    desktop : 1440px,
+    );
+
+    @mixin query($screen){
+    @each $key, $value in $bp{
+        @if ($screen == $key){
+        @media (max-width: $value) {@content;}
+        }
+    }
+    }
+
+    @include query(mobile){}
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    
+    body{
+        background-color: yellow;
+        font-family: sans-serif;
+        font-size: 40px;
+        color: black;
+    }
+    }
+
+    [class^="box-"]{
+    display: grid;
+    place-items : center;
+    border: 5px solid red;
+    background-color: #fff;
+    
+    }
+
+    .container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns:repeat(12, 1fr);
+    grid-gap: 10Px;
+    grid-template-areas : 
+        "a a a a  a a a a  a a a a"
+        "c c b b  b b b b  b b e e"
+        "c c d d  d d d d  d d e e"
+        "c c d d  d d d d  d d e e"
+        "f f f f  f f f f  f f f f",
+        
+    }
+    .box-1{
+    grid-area: a;
+
+    }
+    .box-2{
+    grid-area: b;
+    }
+    .box-3{
+    grid-area: c;
+    }
+    .box-4{
+    grid-area: d;
+    }
+    .box-5{
+    grid-area: e;
+    }
+    .box-6{
+    grid-area: f;
+    }
+
+    @include query(tablet){
+    .container{
+        grid-template-areas :
+        "a a a a  a a a a  a a a a"
+        "b b b b  b b b b  b b b b"
+        "c c c c  d d d d  d d d d"
+        "c c c c  d d d d  d d d d"
+        "c c c c  d d d d  d d d d"
+        "e e e e  e e e e  e e e e"
+        "f f f f  f f f f  f f f f";
+    }
+    
+    }
+    @include query(mobile){
+    .container{
+        grid-template-areas : 
+        "a a a a  a a a a  a a a a"
+        "b b b b  b b b b  b b b b"
+        "c c c c  c c c c  c c c c"
+        "d d d d  d d d d  d d d d"
+        "d d d d  d d d d  d d d d"
+        "e e e e  e e e e  e e e e"
+        "f f f f  f f f f  f f f f";
+        // la ligne a, b, c, = areas
+    
+        
+    }  
+    }
+
+    /*.container{
+    display: grid;
+    height:100vh;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 10px ;
+    }*/
+
+    /*.box-1, .box-2{
+        grid-column: inherit;
+    }*/

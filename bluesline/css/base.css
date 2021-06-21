@@ -1,0 +1,734 @@
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+    */
+
+    /* html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    /* article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+      display: block;
+    }
+    body {
+      line-height: 1;
+    }
+    ol, ul {
+      list-style: none;
+    }
+    blockquote, q {
+      quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+      content: '';
+      content: none;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+    { 
+        box-sizing: border-box;
+    } 
+
+      background: #000 !important   ;
+      color: #0f0 !important;
+      outline: solid #f00 1px !important;
+    }
+
+    }
+
+    @media[media-type] ([media-feature]) {
+    }  
+    /* Styles! */
+    /* ________-------------___RESET___----------------_______ */
+    /* 
+      Author : CPO Stan;
+      Url : stringinteger6@gmail.com;
+      Theme Name : Marseille ligne bleue;
+      Descrition : site d'information sur le blues et site d'échanges, de partages, et d'actualité, blog;
+      Tags : Blues line in the city;
+      */
+
+      /*Feuille de style CSS dédiée aux écrans...*/
+      @media (max-width: 640px) {
+        * {
+          box-sizing: border-box;
+        }
+        
+        /* passer body (et tous les éléments de largeur fixe) en largeur automatique */
+      
+        body {
+          width: auto;
+          margin: 0;
+          padding: 0;
+        }
+        
+        /* fixer une largeur maximale de 100% aux éléments potentiellement problématiques */
+      
+        /* img, */
+        table,
+        td,
+        blockquote,
+        code,
+        pre,
+        textarea,
+        input,
+        iframe,
+        object,
+        embed,
+        video {
+          max-width: 100%;
+        }
+        
+        /* conserver le ratio des images */
+      
+        img {   
+          width: 500%;        
+        }
+        
+        /* gestion des mots longs */
+      
+        textarea,
+        table,
+        td,
+        th,
+        code,
+        pre,
+        samp {
+          -webkit-hyphens: auto; /* césure propre */
+          -moz-hyphens: auto;
+          hyphens: auto;
+          word-wrap: break-word; /* passage à la ligne forcé */
+        }
+        
+        code,
+        pre,
+        samp {
+          white-space: pre-wrap; /* passage à la ligne spécifique pour les éléments à châsse fixe */
+        }
+        
+        /* Passer à une seule colonne (à appliquer aux éléments multi-colonnes) */
+      
+        .element1,
+        .element2 {
+          float: none;
+          width: auto;
+        }
+        
+        /* masquer les éléments superflus */
+      
+        .hide_mobile {
+          display: none !important;
+        }
+        
+        /* Un message personnalisé */
+      
+        body:before {
+          content: "Version mobile du site";
+          display: block;
+          text-align: center;
+          font-style: italic;
+          color: #777;
+        }
+      }
+  /*   Mon code CSS et pour la mise en forme de mon site BLitc$:*/
+    /* prend en compte les variables suisvantes */
+    :root{
+      --ff-primary : Zen_dot-regular, sans-serif;
+      --color1:#1CB8EB;
+      --color2:#1DF584;
+      --color3:#DFD6A8;
+      --color4:#F5DF1D;
+      --color5:#F07F15;
+      --color6:#000;
+      --color7:#fff;
+      --color8:#779ec6;
+      --color9: #eaf2f8;
+      --color99: #eaf2f86d;
+      --color10: #1500ff;
+      --font-size: 10vw;
+      
+    }
+
+    @media print {
+      body {
+          font-size: 0.8px;
+          font-family: serif;
+          background-color: #fff
+      }
+  }
+    @import url=("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+
+    @font-face {
+      font-family: "font-1";
+      src: url(assets/Zen_dot-regular.ttf);
+      /* font-family: Zen Dots, cursive; */
+    }
+
+    ::before, ::after {
+      /* box-sizing: border-box; */
+      margin: 0;
+      padding: 0;
+      
+    }
+
+    *html{
+      margin: 0;
+      padding: 0;
+      display: flex;
+      width: 100%;
+      /* position: 0; */
+    }
+    /* ===================>mise en valeur des bloc dans ma page<==================== */
+  body{
+      margin-left: auto;
+      margin-right: auto;
+      background: url(../img/back-sitdeg.jpg) no-repeat;
+      position: static;
+      z-index: 0; 
+      background-size: 100vw ;
+      background-attachment:scroll;
+      width: 100%;
+    }
+
+      .img-bgsup {
+      top: 0px;
+      left: 0px;
+      bottom: 0px;
+      background-size: 100vw ;
+      background-attachment: fixed;
+      width: 100% ;
+      height: auto;
+      position:fixed;
+      z-index:50;
+    }
+
+    /* ===================>Barre de recherche<==================== */
+    #searchbar{
+    position:relative;
+    width:100%;
+    height:auto;
+    display:inline-block;
+    margin-top: 220px;
+  }
+  #searchbar .text{
+    width:300px;
+    float: none;    
+  }
+  #searchbar .champ{
+    width:600px;
+    height:35px;
+    float:right;
+  }
+  #searchbar .bouton{
+    background-image: url(images/searchbar_button.png);
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    border:none;
+    float:right;
+  }
+  /* ===================HEADER<==================== */
+  header {
+      margin: 0%;
+      display: flex;
+      width: 100%;
+      height: 200px;
+      position: fixed;
+      justify-content: center;
+      align-items: center;
+  }
+
+    header{
+      width: 100vw;
+      display: inline-flex;
+      z-index: 100;
+    }
+
+  .titre-une{
+    text-size-adjust: 50%;
+  }
+  @media only screen and (max-width: 400px) {
+    body h1, h2 { font-size:60%;}
+    }
+
+    @media only screen and (max-width: 800px) {
+    body { font-size:80%;}
+    }
+
+    @media only screen and (max-width: 1100px) {
+    body { font-size:100%;}
+    } 
+
+  header:hover path {
+    fill: #FFEA94;
+    stroke: #FFEA94;
+  }
+
+  header-navigation-item:hover,
+  header-navigation-item:focus {
+    font-weight: auto;
+  }
+
+    /* h1 {
+        font-size: 2em;
+    }
+    /* Si on utilise un petit écran (que ce soit avec un ordinateur dans une petite fenêtre ou avec un smartphone), les titres sont réduits */
+  @media only screen and (min-width: 678px) {
+    h3 {
+    font-size: 2em;
+    }
+    }  */
+
+
+    
+  /* --------------------------- */
+    /* ================> Esssai/ ARIA <=================*/
+    :is(main,.aside) h3:hover, p:hover{
+      color:var(--color9);
+    }
+ 
+    
+    /* .clearfix {
+      overflow: 0 auto;
+    } */
+    
+  /*======> TRACE  <==========*/
+    mark {
+      background-color:var(--color1);
+      color:var(--color7);
+      border-radius: 10em;
+    }
+
+  a {
+    text-align: left;
+  }
+
+
+  /* ===================> ROTATION LOGOOO<===================== */
+
+    #logo{
+      width: 20%;
+      margin-top: 100px;
+      border-radius: 50%;
+      z-index: 200;
+      transition: 0.7s;
+  }
+  #logo img{
+    -webkit-transition:-webkit-transform .9s; 
+    -moz-transition:-moz-transform .9s;       
+    -o-transition:-o-transform .9s;           
+    -ms-transition:-ms-transform .9s;        
+    transition:transform .9s;
+  }
+  #logo  img:hover{
+    -webkit-transform:rotate(180deg); 
+    -moz-transform:rotate(180deg);
+    -o-transform:rotate(180deg); 
+    -ms-transform:rotate(180deg); 
+    transform:rotate(180deg);
+  }
+
+
+    /* ===================> ROTATION END <===================== */
+    /* ===================> ROTATION END <===================== */
+
+    .titre-une{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .zone{
+      display: flex;
+    }
+
+    #sstitre {
+      font-family: 'Roboto', sans-serif;
+      color: var(--color1);
+      text-shadow: 1px 1px 3px var(--color6);
+      line-height: 3rem;
+      /* text-align: center; */
+    }
+
+      .chapô{
+        font-family:var(--ff-primary);
+        font-weight:800;
+        font-size: 1.2rem;
+        text-align:justify;
+        color: var(--color6);
+      }
+
+  /* ==============>READ MORE<============ */
+    #more {display: none;}
+    #btn {display:inline;}
+  /* ===================================== */
+
+      #title {
+      font-size: 7rem;
+      line-height: 4rem;
+      font-weight:bolder;
+      font-family: 'Londrina Outline', cursive;    
+      color: var(--color1);
+      text-shadow: 5px 5px 5px var(--color10);
+      text-rendering: var(--color1);
+      /* text-shadow: 2px 2px 10px var(--color6); */
+    }
+
+      h1 {
+        font-family: 'Orbitron', sans-serif;  
+        /* font-size: 3.5rem; */
+        text-align: center;
+        display: inline;
+        /* word-spacing: 0.2em; */
+        transition: 0.7s;
+        /* position: fixed; */
+        animation-duration: 0.3s;
+        animation-name: h1;
+        animation-delay: 20s;
+        animation-iteration-count: 9;
+        
+    }
+    
+    @keyframes h1 {
+          0%   { opacity:1; }
+          20%   { opacity:0; }
+          25%   { opacity:0; }
+          40%   {opacity:1; }
+          60%   {opacity:0; }
+          70%   {opacity:0; }
+          80%   {opacity:1; }
+          90%   {opacity:1; }
+          95%   {opacity:0; }
+          100% { opacity:1; }
+    }
+
+      h2{
+        font-family: 'Orbitron', sans-serif;
+        text-align: center;
+        font-size: 2rem;
+      }
+
+      h3{
+        font-family: 'Orbitron', sans-serif;
+        text-align: left;
+        font-weight:900;
+        font-size: 1.5rem;
+        margin: 0.1rem;
+        color: var(--color8);
+        background-color: rgb(255, 255, 255);
+      }
+
+      h4{
+        font-family: 'Orbitron', sans-serif;
+        text-align: left;
+        font-weight:900;
+        font-size: 1.2rem;
+        margin-bottom: 0.1rem;
+      }
+
+      p{
+        margin: 0.1rem;
+        text-align: left;
+        font-size: 1rem;
+        color: rgb(2, 0, 118);
+      }
+
+      legend{
+        text-align: left;
+        width: 100%;
+      }
+    /* #title, #logo {
+      display:flex;
+      position:flex;
+    } */
+
+    
+
+      
+    /* ************** BARnavII hambuger********************* */
+    * {
+      /* Pour que les tailles soient correctes */
+      box-sizing: border-box;
+    }
+    
+    body {
+      /* Pour coller le menu au bord, sans espace */
+      margin: 0;
+    }
+    
+    .menu {
+      margin-top: 0px;
+      /* Pour que le menu reste en place quand on scroll */
+      position: fixed;
+      /* Pour que le menu ne soit pas sur le texte et que ce dernier puisse être sélectionné */
+      width: 0px;
+      z-index: 300;
+    }
+    
+    main {
+      /* Pour que le texte ne soit pas sous le menu */
+      margin-left: 50px;
+      /* width: 500px; */
+      text-align: justify;
+    }
+    
+    #hamburger {
+      /* Pour que la checkbox ne s'affiche pas */
+      display: none;
+    }
+    
+    #hamburger-logo {
+      /* Pour que le curseur soit un pointeur */
+      cursor: pointer;
+      background: var(--color1);
+      width: 200px;
+      display: block;
+      color : var(--color9);
+      /* Pour que le menu hamburger s'affiche toujours */
+      text-align: right;
+      /* Pour que le menu hamburger soit "rangé" par défaut */
+      transform: translateX(-168px);
+      padding: 10px;
+    }
+    
+    nav {
+      display: flex;
+      border-radius: 5%,var(--color1);
+      flex-direction: column;
+      background: black;
+      overflow: hidden;
+      width: 200px;
+      /* Pour que les liens soient "rangés" par défaut */
+      transform: translateX(-200px);
+    }
+    
+    #hamburger-logo,
+    nav {
+      /* Pour qu'il y ait une animation */
+      transition: 0.7s;
+    }
+    
+    /* Lorsque #hamburger est coché, le #hamburger-logo et le nav qui sont dans le même parent changent de propriété */
+    #hamburger:checked ~ #hamburger-logo,
+    #hamburger:checked ~ nav {
+      /* Changement de la position pour afficher les menus */
+    transform: translate(0);
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+    }
+    
+    nav a:hover {
+      background : var(--color8);
+    }
+    
+
+    /* **************BAR NORMAL**********************/
+    .navbar-menu{
+      position: center;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    nav {
+      position: relative;
+      text-align:right;
+      padding: 5px;
+      min-width: auto;
+    }
+    nav a {
+      /* justify-content: right ;	 */
+      font-size: 1.1em;
+      margin: 5px;
+      color: var(--color1);
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-shadow: 2px 2px 3px rgba(0,0,0,0.8);
+      text-decoration: none;
+    } 
+    nav a .fa {
+      display:contents;
+
+    } 
+
+    /* #toggleNavbar{
+    } */
+  /**************** ELEMENTS container *****************/
+  /* .container {
+    margin-top: 220px;
+    display : flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: auto; 
+    overflow:auto; 
+    border: 3px solid var(--color4);
+    grid-template-columns: auto 2fr 1fr;
+    grid-gap: 2rem;
+  }      */
+
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: stretch;
+    margin-top: 220px;
+    width: 65%;
+    margin: auto; 
+    overflow:auto; 
+    border: 3px solid var(--color4);
+      /* grid-template-columns: auto 2fr 1fr;
+      grid-gap: 2rem; */
+    }     
+      
+    /**************** ELEMENTS MAIN *****************/
+    .main {
+      display: flex;
+      padding-top: rem;
+      margin: 0 auto 0 auto ;
+      background-color: transparent;
+      flex-wrap: wrap;
+      z-index: -30;
+      width : 80% ;
+      /* float :left ;  */
+    }
+
+    div.spacer{
+      clear:both; height:10px; display:block;
+      }
+
+    /**************** ELEMENTS DE droite *****************/
+
+    .sidebardroite{
+      display: flex;
+      padding-top: 12rem;
+      width : 50%;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      /* float : left ; */
+      /* background-color: var(--color99); */
+  }
+  /**************** ELEMENTS DE central *****************/
+
+    section{
+      display: flex;
+      max-width:  100%;
+      margin: auto ;
+      text-align: justify;
+      flex-flow: wrap;
+      box-sizing: border-box;
+      font-family: ;
+      border: 0.3rem solid var(--color5);
+    }
+
+    .article{
+      margin: 0;
+      min-width: 50%;
+      text-align: justify;
+      font :1em  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      flex-flow: wrap;
+      border: 0.3rem solid var(--color2);
+
+    }
+
+    aside{
+      display: flex;
+      align-self: wrap;
+      /* border: 0.3rem solid var(--color1); */
+      background-color: var(--color99);
+      border-radius: 10px;
+      width: 100%;
+      padding: 5px;
+      font-size: 1em;
+      text-align: justify;
+      margin:5px 0 5px 0;
+      flex-flow: column wrap;
+    }
+    cite{
+      text-align: left;
+    }
+    .content{
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+
+    /* CTA = Call To Action */
+    /* ************** CALL TO ACTION ********************* */
+  .cta {
+    font-family: "Slabo 27px";
+    text-decoration: none;
+    font-size: 0.8em;
+    color: white;
+    background-color: var(--color8);
+    padding: 5px 15px;
+    float: left ;
+    margin-top: px;
+    border-radius: 10px;
+    transition: 0.7s all ease-in;
+  }
+  .cta:hover {
+    color: var(--color1);
+    background-color: var(--color9);
+  }
+  .cta i {
+    margin-left: 10px;
+    transition: 1s all ease-out;
+  }
+  .cta:hover i {
+    color: var(--color6);
+  }
+
+  /* ************** FOOTER ********************* */
+
+    footer{
+      color: var(--color5);
+      background: var(--color6);
+      height: 30px;
+      text-align: center;
+      position: relative;
+      width: 100%;
+
+        /* ************** MEDIA QUERY PAS TOP ********************* */
+
+
+  /* Small '-sm' */
+  @media (min-width: 640px) { ... }
+
+  /* Medium '-md' */
+  @media (min-width: 768px) { ... }
+
+  /* Large '-lg' */
+  @media (min-width: 1024px) { ... }
+
+  /* Extra Large '-xl' */
+  @media (min-width: 1280px) { ... }
+
+
